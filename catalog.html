@@ -37,7 +37,7 @@
           </a>
         </li>
         <li class="navigation-item">
-          <a class="button" href="#">Хочу сюда!</a>
+          <a class="button brown button-navigation" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -109,8 +109,11 @@
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <input type="range" min="0" max="9000">
             </fieldset>
-            <input class="button button-light" type="submit" value="Применить">
-            <input type="reset" value="Сбросить">
+            <div class="filter-column">
+              <input class="button button-submit cold-light-blue" type="submit" value="Применить">
+              <input class="button-clear" type="reset" value="Сбросить">
+            </div>
+
           </form>
         </section>
       <div class="sorting-container">
@@ -134,74 +137,86 @@
         <h2 class="visually-hidden">Гостиницы</h2>
         <ul class="product-list">
           <li class="product-card">
-            <a class="product-card-link" href="product.html">
+            <a class="product-card-image-link" href="product.html">
               <img class="product-card-image" src="images/hotels/amara-resort.jpg" width="299" height="206"
                 alt="Гостиница Amara Resort & Spa">
+            </a>
+            <a class="product-card-title-link">
               <h3 class="product-card-title">Amara Resort & Spa</h3>
             </a>
             <span class="product-card-type">Гостиница</span>
             <span class="product-card-price">От 4000 ₽</span>
-            <a class="product-card-button button" href="#">Подробнее</a>
-            <a class="product-card-button button cold-light-blue" href="#">В избранное</a>
-            <div class="stars">
+            <a class="button-card-more button brown" href="product.html">Подробнее</a>
+            <a class="button-card-favorites button cold-light-blue" href="product.html">В избранное</a>
+            <img class="stars" src="images/stars-four.svg" width="91" height="17" alt="4 звезды">
+            <!-- <div class="stars">
               <img src="images/star.svg" width="18" height="17" alt="Звезды">
-              <img src="images/star.svg" width="18" height="17" alt="Звезды">
-              <img src="images/star.svg" width="18" height="17" alt="Звезды">
-              <img src="images/star.svg" width="18" height="17" alt="Звезды">
-            </div>
+              <img src="images/stars-two.svg" width="43" height="17" alt="2 звезды">
+              <img src="images/stars-three.svg" width="68" height="17" alt="3 звезды">
+              <img src="images/stars-four.svg" width="91" height="17" alt="4 звезды">
+            </div> -->
             <p class="rating">Рейтинг: 8,5</p>
           </li>
           <li class="product-card">
-            <a class="product-card-link" href="product.html">
+            <a class="product-card-image-link" href="product.html">
               <img class="product-card-image" src="images/hotels/desert-quail-inn.jpg" width="299" height="206"
                 alt="Гостиница Desert Quail Inn">
+            </a>
+            <a class="product-card-title-link">
               <h3 class="product-card-title">Desert Quail Inn</h3>
             </a>
             <span class="product-card-type">Гостиница</span>
             <span class="product-card-price">От 3000 ₽</span>
-            <a class="product-card-button button" href="#">Подробнее</a>
-            <a class="product-card-button button cold-light-blue" href="#">В избранное</a>
-            <div class="stars">
+            <a class="button-card-more button brown" href="product.html">Подробнее</a>
+            <a class="button-card-favorites button cold-light-blue" href="product.html">В избранное</a>
+            <img src="images/stars-three.svg" width="68" height="17" alt="3 звезды">
+            <!-- <div class="stars">
               <img src="images/star.svg" width="18" height="17" alt="Звезды">
               <img src="images/star.svg" width="18" height="17" alt="Звезды">
               <img src="images/star.svg" width="18" height="17" alt="Звезды">
-            </div>
+            </div> -->
             <p class="rating">Рейтинг: 8,9</p>
           </li>
           <li class="product-card">
-            <a class="product-card-link" href="product.html">
+            <a class="product-card-image-link" href="product.html">
               <img class="product-card-image" src="images/hotels/villas-at-poco.jpg" width="299" height="206"
                 alt="Гостиница Villas at Poco Diablo">
+            </a>
+            <a class="product-card-title-link">
               <h3 class="product-card-title">Villas at Poco Diablo</h3>
             </a>
             <span class="product-card-type">Гостиница</span>
             <span class="product-card-price">От 2000 ₽</span>
-            <a class="product-card-button button" href="#">Подробнее</a>
-            <a class="product-card-button button green-light" href="#">В избранном</a>
-            <div class="stars">
+            <a class="button-card-more button brown" href="product.html">Подробнее</a>
+            <a class="button-card-favorites button green-light" href="product.html">В избранном</a>
+            <img src="images/stars-two.svg" width="43" height="17" alt="2 звезды">
+            <!-- <div class="stars">
               <img src="images/star.svg" width="18" height="17" alt="Звезды">
               <img src="images/star.svg" width="18" height="17" alt="Звезды">
-            </div>
+            </div> -->
             <p class="rating">Рейтинг: 9,2</p>
           </li>
           <li class="product-card">
-            <a class="product-card-link" href="product.html">
+            <a class="product-card-image-link" href="product.html">
               <img class="product-card-image" src="images/hotels/greentree-inn.jpg" width="299" height="206"
                 alt="Гостиница GreenTree Inn">
+            </a>
+            <a class="product-card-title-link" href="product.html">
               <h3 class="product-card-title">GreenTree Inn</h3>
             </a>
             <span class="product-card-type">Гостиница</span>
             <span class="product-card-price">От 3000 ₽</span>
-            <a class="product-card-button button" href="#">Подробнее</a>
-            <a class="product-card-button button cold-light-blue" href="#">В избранное</a>
-            <div class="stars">
+            <a class="button-card-more button brown" href="product.html">Подробнее</a>
+            <a class="button-card-favorites button cold-light-blue" href="product.html">В избранное</a>
+            <img src="images/stars-two.svg" width="43" height="17" alt="2 звезды">
+            <!-- <div class="stars">
               <img src="images/star.svg" width="18" height="17" alt="Звезды">
               <img src="images/star.svg" width="18" height="17" alt="Звезды">
-            </div>
+            </div> -->
             <p class="rating">Рейтинг: 9,2</p>
           </li>
         </ul>
-        <button class="button button-more cold-light-blue" type="button">Загрузить ещё</button>
+        <button class="button button-load cold-light-blue" type="button">Загрузить ещё</button>
         <div class="pagination-wrapper">
           <ul class="pagination">
             <li class="pagination-item">
@@ -225,20 +240,20 @@
           </ul>
           <div class="pagination-number">
             <span class="select">Гостиниц на странице:</span>
-          <select class="select-control">
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="38">38</option>
-          </select>
-          </div>          
+            <select class="select-control">
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="38">38</option>
+            </select>
+          </div>
         </div>
       </section>
       <section class="subscribe-catalog">
         <h2 class="page-subscribe-title">Подпишитесь на рассылку</h2>
         <p class="page-subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="field" placeholder="email@example.com" type="email" name="subscribe-email" required>
-          <button class="button subscribe-button" type="submit">
+          <input class="subscribe-field" placeholder="Ваш e-mail" type="email" name="subscribe-email" required>
+          <button class="button subscribe-button cold-light-blue" type="submit">
             <span>Подписаться</span>
           </button>
         </form>
