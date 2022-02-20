@@ -78,11 +78,16 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  /* margin-right: 35px; */
 }
 
 .navigation-link {
   display: block;
-  padding: 20px 17px;
+  /* padding: 20px 17px; */
+  padding-top: 19px;
+  padding-bottom: 20px;
+  padding-right: 15px;
+  padding-left: 19px;
   font-weight: 700;
   text-align: center;
   color: #000000;
@@ -96,13 +101,32 @@ body {
 }
 
 .navigation-user {
+  justify-content: end;
   max-width: 300px;
-  margin-left: auto;
+  margin-left: auto
 }
 
 .navigation-user .navigation-link {
-  min-width: 18px;
-  min-height: 17px;
+  width: 42px;
+  height: 66px;
+}
+
+.search {
+  padding: 23px 12px 24px 12px;
+  margin-right: 12px;
+  box-sizing: border-box;
+  background-image: url(../images/icons/search.svg);
+  background-repeat: no-repeat;
+  background-position: 101% 50%;
+}
+
+.favorite {
+  padding: 23px 12px 24px 12px;
+  box-sizing: border-box;
+  margin-right: 18px;
+  background:
+   url(../images/icons/number.svg) 100% 38% no-repeat,
+   url(../images/icons/favorite.svg) 50% 50% no-repeat;
 }
 
 .main-container {
@@ -116,15 +140,16 @@ body {
   background-size: 1200px auto;
   background-repeat: no-repeat; */
   background:
-  url("../images/divider.svg") -4px 428px no-repeat,
+  url("../images/background-divider.svg") -4px 428px no-repeat,
   url("../images/background-index.jpg") no-repeat;
+
   text-align: center;
   margin: 0 auto;
   padding-top: 51px;
 }
 
 .main-background-image {
-  margin-bottom: 145px;
+  margin-bottom: 139px;
 }
 
 .main-inner {
@@ -211,6 +236,10 @@ body {
 }
 
 .advantages-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 400px;
   min-height: 384px;
   text-align: center;
@@ -225,11 +254,11 @@ body {
   display: block;
 }
 
-.search {
+.hotels-search {
   margin-bottom: 93px;
 }
 
-.search-title {
+.hotels-search-title {
   margin: 0;
   margin-bottom: 29px;
   font-weight: 700;
@@ -238,7 +267,7 @@ body {
   text-transform: uppercase;
 }
 
-.search-text {
+.hotels-search-text {
   margin: 0;
   margin-bottom: 56px;
   font-size: 22px;
