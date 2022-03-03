@@ -48,7 +48,8 @@
   </header>
   <main class="main-inner main-container">
     <div class="page-container inner-wrapper">
-      <h1 class="inner-header-title">Гостиницы Седоны</h1>
+      <div class="inner-filter-wrapper">
+        <h1 class="inner-header-title">Гостиницы Седоны</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
@@ -93,21 +94,21 @@
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control">
+                <label class="control control-radio">
                   <input class="control-input visually-hidden" type="radio" name="product-group" value="hotel" checked>
                   <span class="control-mark"></span>
                   <span class="control-label">Гостиница</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
+                <label class="control control-radio">
                   <input class="control-input visually-hidden" type="radio" name="product-group" value="motel">
                   <span class="control-mark"></span>
                   <span class="control-label">Мотель</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
+                <label class="control control-radio">
                   <input class="control-input visually-hidden" type="radio" name="product-group" value="apartments">
                   <span class="control-mark"></span>
                   <span class="control-label">Апартаменты</span>
@@ -144,6 +145,8 @@
           </div>
         </form>
       </section>
+      </div>
+      
       <div class="sorting-container">
         <p class="inner-text-search">Найдено гостиниц: 38</p>
         <div class="select sorting-type">
@@ -181,7 +184,7 @@
             <span class="product-card-price">От 4000 ₽</span>
             <a class="button-card-more button brown" href="#">Подробнее</a>
             <a class="button-card-favorites button cold-light-blue" href="#">В избранное</a>
-            <p class="stars stars-four"><span class="visually-hidden">4 звезды.</span></p>
+            <p class="stars stars-4"><span class="visually-hidden">4 звезды.</span></p>
             <!-- <img class="stars" src="images/stars-four.svg" width="91" height="17" alt="4 звезды."> -->
             <!-- <div class="stars">
               <img src="images/star.svg" width="18" height="17" alt="Звезды.">
@@ -203,7 +206,7 @@
             <span class="product-card-price">От 3000 ₽</span>
             <a class="button-card-more button brown" >Подробнее</a>
             <a class="button-card-favorites button cold-light-blue" href="#">В избранное</a>
-            <p class="stars stars-three"><span class="visually-hidden">3 звезды.</span></p>
+            <p class="stars stars-3"><span class="visually-hidden">3 звезды.</span></p>
             <!-- <img src="images/stars-three.svg" width="68" height="17" alt="3 звезды"> -->
             <!-- <div class="stars">
               <img src="images/star.svg" width="18" height="17" alt="Звезды.">
@@ -224,7 +227,7 @@
             <span class="product-card-price">От 2000 ₽</span>
             <a class="button-card-more button brown" href="#">Подробнее</a>
             <a class="button-card-favorites button green-light" href="#">В избранном</a>
-            <p class="stars stars-two"><span class="visually-hidden">2 звезды.</span></p>
+            <p class="stars stars-2"><span class="visually-hidden">2 звезды.</span></p>
             <p class="rating">Рейтинг: 9,2</p>
           </li>
           <li class="product-card">
@@ -239,7 +242,7 @@
             <span class="product-card-price">От 3000 ₽</span>
             <a class="button-card-more button brown" href="#">Подробнее</a>
             <a class="button-card-favorites button cold-light-blue" href="#">В избранное</a>
-            <p class="stars stars-two"><span class="visually-hidden">2 звезды.</span></p>
+            <p class="stars stars-2"><span class="visually-hidden">2 звезды.</span></p>
             <p class="rating">Рейтинг: 9,2</p>
           </li>
         </ul>
@@ -270,7 +273,7 @@
           </ul>
           <div class="pagination-number">
             <span class="select">Гостиниц на странице:</span>
-            <select class="select-control">
+            <select class="select-control select-control-pagination">
               <option value="4">4</option>
               <option value="5">5</option>
               <option value="38">38</option>
@@ -282,7 +285,7 @@
         <h2 class="page-subscribe-title">Подпишитесь на рассылку</h2>
         <p class="page-subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="subscribe-field" placeholder="Ваш e-mail" type="email" name="subscribe-email" disabled>
+          <input class="subscribe-field" placeholder="Ваш e-mail" type="email" name="subscribe-email" required>
           <button class="button subscribe-button cold-light-blue" type="submit">
             <span>Подписаться</span>
           </button>
