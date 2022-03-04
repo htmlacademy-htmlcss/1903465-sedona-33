@@ -118,9 +118,8 @@
         <h2 class="page-subscribe-title">Подпишитесь на рассылку</h2>
         <p class="page-subscribe-text">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="subscribe-field" placeholder="Ваш e-mail" type="email" name="subscribe-email">
-          <button class="button subscribe-button cold-light-blue" type="submit">
-            <span>Подписаться</span>
+          <input class="subscribe-field" placeholder="Ваш e-mail" type="email" name="subscribe-email" required>
+          <button class="button subscribe-button cold-light-blue" type="submit">Подписаться
           </button>
         </form>
       </section>
@@ -160,7 +159,47 @@
         </p>
       </section>
     </div>
-  </footer>      
+  </footer> 
+  <div class="modal-container modal-container-close">
+    <div class="modal modal-search">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="form-label-arrival" for="search-arrival-date">Дата заезда:</label>
+          <div class="form-arrival-date">
+            <input class="field-date" type="text" id="search-arrival-date" name="search-arrival-date" placeholder="01.01.2022">
+            <img src="images/date.svg" width="15" height="15" alt="Выбрать дату заезда.">
+            <p class="search-info-error visually-hidden">Мы не можем отправить вас в прошлое.</p>
+          </div>        
+          <label class="form-label-departure" for="search-departure-date"> Дата выезда:</label>
+          <div class="form-departure-date">
+            <input class="field-date" type="text" id="search-departure-date" name="search-departure-date" placeholder="01.01.2022">
+            <img src="images/date.svg" width="15" height="15" alt="Выбрать дату выезда.">
+            <p class="search-info visually-hidden">На эти даты есть свободные номера. Пока есть.</p>
+          </div>       
+          <label class="form-label-of-adults" for="number-of-adults">Взрослые:</label>
+          <div class="number-of-adults-wrapper">
+            <button class="button-minus" type="submit"></button>
+            <input class="field-number-of-adults" type="text" id="number-of-adults" name="number-of-adults" placeholder="" value="2">
+            <button class="button-plus" type="submit"></button>
+          </div>
+          <label class="form-label-of-children" 
+          for="number-of-children">Дети:</label>
+          <div class="number-of-children-wrapper">
+            <button class="button-minus" type="submit"></button>
+            <input class="field-number-of-children" type="text" id="number-of-children" name="number-of-children" placeholder="" value="1">
+            <button class="button-plus" type="submit"></button>
+        </div>
+          <button class="button search-submit-button" type="submit">Найти</button>
+        </form>
+      </section>
+   </div>
+  </div>
+            
+            
 </body>
 
 </html>

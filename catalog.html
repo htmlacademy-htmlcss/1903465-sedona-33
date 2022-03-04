@@ -48,7 +48,8 @@
   </header>
   <main class="main-inner main-container">
     <div class="page-container inner-wrapper">
-      <h1 class="inner-header-title">Гостиницы Седоны</h1>
+      <div class="inner-filter-wrapper">
+        <h1 class="inner-header-title">Гостиницы Седоны</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
@@ -68,20 +69,23 @@
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="pool" checked>
-                    Бассейн
+                  <input class="control-input visually-hidden" type="checkbox" name="pool" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Бассейн</span> 
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="parking" checked>
-                    Парковка
+                  <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Парковка</span> 
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="wifi">
-                    Wi-Fi
+                  <input class="control-input visually-hidden" type="checkbox" name="wifi">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Wi-Fi</span>     
                 </label>
               </li>
             </ul>
@@ -90,28 +94,50 @@
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control">
-                   <input class="control-input" type="radio" name="product-group" value="hotel" checked>
-                    Гостиница
+                <label class="control control-radio">
+                  <input class="control-input visually-hidden" type="radio" name="product-group" value="hotel" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Гостиница</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="product-group" value="motel">
-                    Мотель
+                <label class="control control-radio">
+                  <input class="control-input visually-hidden" type="radio" name="product-group" value="motel">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Мотель</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="product-group" value="apartments">
-                    Апартаменты
+                <label class="control control-radio">
+                  <input class="control-input visually-hidden" type="radio" name="product-group" value="apartments">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Апартаменты</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-            <input type="range" min="0" max="9000">
+              <div class="range">           
+                <div class="range-wrapper-inputs">
+                  <label class="catalog-filter-label">
+                    <input class="range-input" type="number" value="0" name="min-price">                              <span hidden> от</span>
+                  </label>
+                  <label class="catalog-filter-label">
+                    <input class="range-input" type="number" value="9000" name="max-price"> до
+                  </label>
+                </div>
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 20px; width: 227px">
+                    <button type="button" class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button type="button" class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>                
+              </div>
           </fieldset>
           <div class="filter-column">
             <input class="button button-submit cold-light-blue" type="submit" value="Применить">
@@ -119,13 +145,17 @@
           </div>
         </form>
       </section>
+      </div>
+      
       <div class="sorting-container">
         <p class="inner-text-search">Найдено гостиниц: 38</p>
-        <select class="select-control" aria-label="Сортировка">
-          <option value="popular">Сначала дешёвые</option>
-          <option value="cheap">Сначала дорогие</option>
-          <option value="expensive">Сначала дорогие</option>
-        </select>
+        <div class="select sorting-type">
+          <select class="select-control" aria-label="Сортировка">
+            <option value="popular">Сначала дешёвые</option>
+            <option value="cheap">Сначала дорогие</option>
+            <option value="expensive">Сначала дорогие</option>
+          </select>
+        </div>        
         <a class="card-grid-toggle card-grid-toggle-current" href="#">
           <img src="images/mode-tile.svg" width="16" height="14" alt="Показать карточки.">
           <!-- <span class="visually-hidden">Показать карточки</span> -->
@@ -134,7 +164,7 @@
           <img src="images/mode-slideshow.svg" width="16" height="14" alt="Показать карточку.">
           <!-- <span class="visually-hidden">Показать карточку</span> -->
         </a>
-        <a class="card-grid-toggle button-list" href="#">
+        <a class="card-grid-toggle" href="#">
           <img src="images/mode-list.svg" width="16" height="14" alt="Показать список.">
           <!-- <span class="visually-hidden">Показать список</span> -->
         </a>
@@ -154,13 +184,7 @@
             <span class="product-card-price">От 4000 ₽</span>
             <a class="button-card-more button brown" href="#">Подробнее</a>
             <a class="button-card-favorites button cold-light-blue" href="#">В избранное</a>
-            <img class="stars" src="images/stars-four.svg" width="91" height="17" alt="4 звезды.">
-            <!-- <div class="stars">
-              <img src="images/star.svg" width="18" height="17" alt="Звезды.">
-              <img src="images/stars-two.svg" width="43" height="17" alt="2 звезды.">
-              <img src="images/stars-three.svg" width="68" height="17" alt="3 звезды.">
-              <img src="images/stars-four.svg" width="91" height="17" alt="4 звезды.">
-            </div> -->
+            <p class="stars stars-4"><span class="visually-hidden">4 звезды.</span></p>            
             <p class="rating">Рейтинг: 8,5</p>
           </li>
           <li class="product-card">
@@ -175,12 +199,7 @@
             <span class="product-card-price">От 3000 ₽</span>
             <a class="button-card-more button brown" >Подробнее</a>
             <a class="button-card-favorites button cold-light-blue" href="#">В избранное</a>
-            <img src="images/stars-three.svg" width="68" height="17" alt="3 звезды">
-            <!-- <div class="stars">
-              <img src="images/star.svg" width="18" height="17" alt="Звезды.">
-              <img src="images/star.svg" width="18" height="17" alt="Звезды.">
-              <img src="images/star.svg" width="18" height="17" alt="Звезды.">
-            </div> -->
+            <p class="stars stars-3"><span class="visually-hidden">3 звезды.</span></p>            
             <p class="rating">Рейтинг: 8,9</p>
           </li>
           <li class="product-card">
@@ -195,11 +214,7 @@
             <span class="product-card-price">От 2000 ₽</span>
             <a class="button-card-more button brown" href="#">Подробнее</a>
             <a class="button-card-favorites button green-light" href="#">В избранном</a>
-            <img src="images/stars-two.svg" width="43" height="17" alt="2 звезды.">
-            <!-- <div class="stars">
-              <img src="images/star.svg" width="18" height="17" alt="Звезды.">
-              <img src="images/star.svg" width="18" height="17" alt="Звезды.">
-            </div> -->
+            <p class="stars stars-2"><span class="visually-hidden">2 звезды.</span></p>
             <p class="rating">Рейтинг: 9,2</p>
           </li>
           <li class="product-card">
@@ -214,15 +229,14 @@
             <span class="product-card-price">От 3000 ₽</span>
             <a class="button-card-more button brown" href="#">Подробнее</a>
             <a class="button-card-favorites button cold-light-blue" href="#">В избранное</a>
-            <img src="images/stars-two.svg" width="43" height="17" alt="2 звезды.">
-            <!-- <div class="stars">
-              <img src="images/star.svg" width="18" height="17" alt="Звезды.">
-              <img src="images/star.svg" width="18" height="17" alt="Звезды.">
-            </div> -->
+            <p class="stars stars-2"><span class="visually-hidden">2 звезды.</span></p>
             <p class="rating">Рейтинг: 9,2</p>
           </li>
         </ul>
-        <button class="button button-load cold-light-blue" type="button">Загрузить ещё</button>
+        <div class="button-load-wrapper">
+          <button class="button button-load cold-light-blue" type="button">Загрузить ещё</button>
+        </div>
+        
         <div class="pagination-wrapper">
           <ul class="pagination">
             <li class="pagination-item">
@@ -246,7 +260,7 @@
           </ul>
           <div class="pagination-number">
             <span class="select">Гостиниц на странице:</span>
-            <select class="select-control">
+            <select class="select-control select-control-pagination">
               <option value="4">4</option>
               <option value="5">5</option>
               <option value="38">38</option>
