@@ -774,17 +774,17 @@ body {
   width: 100%;
 }
 
-/* в разметке есть класс? */
 .field-date {
-  position: relative;
+  /* position: relative; */
   margin: 0;
   padding: 5px 19px;
   font: inherit;
   background-color: #F2F2F2;  
-  border: none;
+  border: 2px solid transparent;
   border-radius: 4px;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 4px;
 }
 
 .field-date:hover {
@@ -828,30 +828,45 @@ body {
 .form-arrival-date {
   grid-column: 2 / 5;
   grid-row: 1 / 2;
+  position: relative;
+} 
+
+.date {
+  border: 1px solid transparent;
+  cursor: pointer;
 }
 
-.form-arrival-date img {
+.date img {
   position: absolute;
-  right: 90px;
-  top: 149px;
+  right: 10px;
+  top: 10px;
 }
 
-.form-departure-date img {
+.form-arrival-date button {
   position: absolute;
-  right: 90px;
-  top: 250px;
-}
+  right: 0;
+  top: 0;
+} 
+
+.form-departure-date button {
+  position: absolute;
+  right: 0;
+  top: 0;
+} 
+
+/* .form-arrival-date img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+} */
 
 .search-info-error {
-  /* grid-column: 2 / 5; */
-  /* grid-row: 2 / 3; */
   margin: 0;
   /* padding: 5px 0; */
   font-size: 16px;
-  line-height: 40px;
+  line-height: 20px;
   font-weight: 400;
-  color: #FF5757;
-  /* align-self: start; */
+  color: #FF5757;  
 }
 
 .form-label-departure {
@@ -862,14 +877,19 @@ body {
 .form-departure-date {
   grid-column: 2 / 5;
   grid-row: 2 / 3;
+  position: relative;
 }
 
-.search-info {
-  /* grid-column: 2 / 5; */
-  /* grid-row: 4 / 5; */
+.form-departure-date img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.search-info {  
   margin: 0;
   font-size: 16px;
-  line-height: 40px;
+  line-height: 20px;
   font-weight: 400;
   color: #333333;
 }
@@ -879,25 +899,12 @@ body {
   grid-row: 3 / 4;
 }
 
-
-.field-number-of-adults {
+.numbers-wrapper-adults {
   grid-column: 2 / 3;
-  grid-row: 3 / 4;
-  width: 133px;
-  justify-self: center; 
-  /* padding: 0; */
-  /* padding-top: 10px; */
-  /* padding-bottom: 10px; */
-  
-  /* background-color: #F2F2F2; */
-  
-  /* margin: 0 auto; */
-  
+  grid-row: 3 / 4;  
 }
 
-.number-of-adults-wrapper {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
+.numbers-wrapper {
   display: flex;
   width: 133px;
   background-color: #F2F2F2;
@@ -912,13 +919,15 @@ body {
   height: 50px;
   box-sizing: border-box;
   border: none;
-  background-image: url("images/minus.svg");
+  background-image: url("../images/minus.svg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: 13px 13px;
-  background-color: tomato;
+  cursor: pointer;
+  /* background-color: tomato; */
 }
 
-.field-number-of-adults {
+.field-number {
   margin: 0;
   padding: 0;
   width: 50px;
@@ -935,10 +944,12 @@ body {
   height: 50px;
   box-sizing: border-box;
   border: none;
-  background-image: url("images/plus.svg");
+  background-image: url("../images/plus.svg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: 13px 13px;
-  background-color: tomato;  
+  cursor: pointer;
+  /* background-color: tomato;   */
 }
 
 
@@ -947,10 +958,10 @@ body {
   grid-row: 3 / 4;;
 }
 
-.field-number-of-children {
+.numbers-wrapper-children {
   grid-column: 4 / 5;
   grid-row: 3 / 4;
-  width: 133px;
+  /* width: 133px; */
   /* padding: 0; */
   /* padding-top: 10px; */
   /* padding-bottom: 10px; */
@@ -975,108 +986,6 @@ body {
   border-radius: 10px;  
 }
 
-/*  дублирование кода из песочницы*/
-/* .modal-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(242, 242, 242, 0.8);
-} */
-
-/* .modal-container-close {
-  display: none;
-} */
-
-/* /* .modal {
-  position: relative;
-  margin: auto;
-  padding: 62px 70px 70px 70px;
-  background-color: #ffffff;
-  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
-  border-radius: 30px;
-}
-
-.modal-search {
-  width: 715px;
-} */
-
-
-/* .modal-close-button {
-  position: absolute;
-  padding: 0;
-  top: 54px;
-  right: 70px;
-  width: 53px;
-  height: 53px;
-  background-color: #F2F2F2;
-  border: none;
-  border-radius: 50%;
-  background-image: url("../images/close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}  */
-
-/* .modal-title {
-  margin: 0;
-  margin-bottom: 32px;
-  font-family: inherit;
-  font-size: 30px;
-  line-height: 40px;
-  font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
-} */
-
-/* .field {
-  margin: 0;
-} */
-
-
-/* .search-form {
-  display: grid;  
-  grid-template-columns: 135px 133px 114px 133px;
-  grid-template-rows: 79px 79px 50px;
-  column-gap: 20px;
-  row-gap: 11px;
-} */
-
-/* .form-label-arrival {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-} */
-
-/* .form-arrival-date {
-  grid-column: 2 / 5;
-  grid-row: 1 / 2;
-} */
-
-/* .search-info-error {
-  margin: 0;  
-} */
-
-/* .form-label-departure {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-} */
-
-.modal-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(242, 242, 242, 0.8);
-}
-
-/* .modal-container-close {
-  display: none;
-} */
-
 .modal {
   position: relative;
   margin: auto;
@@ -1085,233 +994,6 @@ body {
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
 }
-
-.modal-search {
-  width: 715px;
-}
-
-
-.modal-close-button {
-  position: absolute;
-  padding: 0;
-  top: 54px;
-  right: 70px;
-  width: 53px;
-  height: 53px;
-  background-color: #F2F2F2;
-  border: none;
-  border-radius: 50%;
-  background-image: url("../images/close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-} 
-
-.modal-title {
-  margin: 0;
-  margin-bottom: 32px;
-  font-family: inherit;
-  font-size: 30px;
-  line-height: 40px;
-  font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
-}
-.field {
-  margin: 0;
-}
-
-
-.search-form {
-  display: grid;  
-  grid-template-columns: 135px 133px 114px 133px;
-  grid-template-rows: 79px 79px 50px;
-  column-gap: 20px;
-  row-gap: 11px;
-}
-
-.form-label-arrival {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-.form-arrival-date {
-  grid-column: 2 / 5;
-  grid-row: 1 / 2;
-}
-
-.search-info-error {
-  margin: 0;  
-}
-
-.form-label-departure {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-
-.form-departure-date {
-  grid-column: 2 / 5;
-  grid-row: 2 / 3;
-}
-
-.search-info {
-  margin: 0;
-}
-
-.form-label-of-adults {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;  
-}
-
-.number-of-adults-wrapper {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
-  display: flex;
-  width: 133px;
-  background-color: #F2F2F2;
-  margin: 0;
-  padding: 0;
-}
-
-.button-minus {
-  margin: 0;
-  padding: 0;  
-  width: 40px;
-  height: 50px;
-  box-sizing: border-box;
-  border: none;
-  background-image: url("images/minus.svg");
-  background-repeat: no-repeat;
-  background-size: 13px 13px;
-  background-color: tomato;  
-}
-
-.field-number-of-adults {
-  margin: 0;
-  padding: 0;  
-  width: 50px;
-  height: 50px;
-  box-sizing: border-box;
-  text-align: center;
-  border: none;
-}
-
-.button-plus {
-  margin: 0;
-  padding: 0;  
-  width: 40px;
-  height: 50px;
-  box-sizing: border-box;
-  border: none;
-  background-image: url("images/plus.svg");
-  background-repeat: no-repeat;
-  background-size: 13px 13px;
-  background-color: tomato;  
-}
-
-.form-label-of-children {
-  grid-column: 3 / 4;
-  grid-row: 3 / 4;;
-}
-
-
-
-.field-number-of-children {
-  grid-column: 4 / 5;
-  grid-row: 3 / 4;;
-}
-
-.search-submit-button {
-  width: 575px;
-  height: 60px;
-  display: block;
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  box-sizing: border-box;
-  
-}
-
-
-.search-info {  
-  margin: 0;
-}
-
-.form-label-of-adults {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-  /* fu: center; */
-}
-
-.number-of-adults-wrapper {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
-  display: flex;
-  width: 133px;
-  background-color: #F2F2F2;
-  margin: 0;
-  padding: 0;
-}
-
-.button-minus {
-  margin: 0;
-  padding: 0;  
-  width: 40px;
-  height: 50px;
-  box-sizing: border-box;
-  border: none;
-  background-image: url("images/minus.svg");
-  background-repeat: no-repeat;
-  background-size: 13px 13px;
-  background-color: tomato;  
-}
-
-.field-number-of-adults {
-  margin: 0;
-  padding: 0;  
-  width: 50px;
-  height: 50px;
-  box-sizing: border-box;
-  text-align: center;
-  border: none;
-}
-
-.button-plus {
-  margin: 0;
-  padding: 0;
-  width: 40px;
-  height: 50px;
-  box-sizing: border-box;
-  border: none;
-  background-image: url("images/plus.svg");
-  background-repeat: no-repeat;
-  background-size: 13px 13px;
-  background-color: tomato;  
-}
-
-.form-label-of-children {
-  grid-column: 3 / 4;
-  grid-row: 3 / 4;;
-}
-
-
-
-.field-number-of-children {
-  grid-column: 4 / 5;
-  grid-row: 3 / 4;;
-}
-
-.search-submit-button {
-  width: 575px;
-  height: 60px;
-  display: block;
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  box-sizing: border-box;
-  
-}
- 
 
 /* .inner-wrapper  не используется в стилях, нужно ли в разметке?*/
 
@@ -1451,7 +1133,8 @@ body {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: #ffffff;  
+  background-color: #ffffff; 
+  border: 2px solid transparent;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -1577,7 +1260,7 @@ body {
 }
 
 .control-input[type="radio"]:focus + .control-mark {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
   box-sizing: border-box;
 }
 
@@ -1615,6 +1298,7 @@ body {
   color: #FFFFFF;
   background: rgba(0, 0, 0, 0);
   border: 0;
+  cursor: pointer;
 }
 
 .button-clear:hover {
@@ -1803,6 +1487,7 @@ body {
   padding-bottom: 8px;
   padding-right: 9px;
   padding-left: 9px;
+  border: 1px solid transparent;
   box-sizing: border-box;
 }
 
@@ -1826,16 +1511,14 @@ body {
 
 
 .green-light:hover {
-  background-color: #6C9E42; 
-  border: 2px solid transparent; 
+  background-color: #6C9E42;
+  border: 1px solid transparent;   
 }
 
 .green-light:active {
-  /* color: #FFFFFF;  */
-  /* opacity: 0.3; */
-  /* color: rgba(255, 255, 255, 0.3); */
-  background-color: #6C9E42;
-  border: 2px solid transparent;
+  color: #ffffff; 
+  opacity: 0.3;  
+  background-color: #6C9E42;  
 }
 
 .green-light:focus {
